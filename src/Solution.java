@@ -54,7 +54,10 @@ class ContactBook
          { 
            Node current = root;
            for(int i=0 ; i<contact.length();i++)
-              current=current.find(contact.charAt(i));
+              {
+               current=current.find(contact.charAt(i));
+               if(current == null) break;              
+              }
            return current;
          
          }
